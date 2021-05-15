@@ -29,6 +29,7 @@
                             <!--配置jar包内创建MANIFEST。MF文件 -->
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>classes/</classpathPrefix>
+                            <!--指定jar包启动类 -->
                             <mainClass>com.lazy.httpbasic.Boostrap</mainClass>
                         </manifest>
                     </archive>
