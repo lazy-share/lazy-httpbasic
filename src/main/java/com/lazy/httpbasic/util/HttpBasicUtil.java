@@ -4,8 +4,6 @@ package com.lazy.httpbasic.util;
 import com.lazy.httpbasic.bean.HttpDigest;
 import com.lazy.httpbasic.bean.HttpRequest;
 import com.lazy.httpbasic.conf.Config;
-import com.lazy.httpbasic.util.SnowflakeIdUtil;
-import com.lazy.httpbasic.util.StringUtil;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
