@@ -8,7 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.*;
 
-public class Boostrap {
+public class Bootstrap {
 
     private static final int nThreads = Runtime.getRuntime().availableProcessors();
 

@@ -30,7 +30,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>classes/</classpathPrefix>
                             <!--指定jar包启动类 -->
-                            <mainClass>com.lazy.httpbasic.Boostrap</mainClass>
+                            <mainClass>com.lazy.httpbasic.Bootstrap</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
