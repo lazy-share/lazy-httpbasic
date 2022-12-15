@@ -48,7 +48,7 @@ public class WorkTask implements Runnable {
                 return;
             }
             //校验http basic 超时时间
-            String decodeNonce = HttpBasicUtil.base64DecodeNonce(digestRequest.getNonce());
+            String decodeNonce = HttpBasicUtil.base64EncodeNonce(digestRequest.getNonce());
             long nonce = Long.parseLong(decodeNonce.split("::")[0]);
             long currentTime = System.currentTimeMillis();
             if (currentTime - nonce > Config.CONSOLE_HTTP_SESSION_TIME) {

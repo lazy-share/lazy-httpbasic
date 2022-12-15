@@ -30,9 +30,10 @@ public class HttpBasicUtil {
         return null;
     }
 
-    public static String base64DecodeNonce() {
+    public static String base64EncodeNonce() {
         try {
-            return base64Encode((System.currentTimeMillis() + "::" + SnowflakeIdUtil.getInstance().nextId()).getBytes("utf-8"));
+            return base64Encode((System.currentTimeMillis() + "::" + SnowflakeIdUtil.getInstance().nextId()).getBytes("utf-8"))
+                    .replaceAll("==", "");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -40,13 +41,13 @@ public class HttpBasicUtil {
     }
 
 
-    public static String base64DecodeNonce(String nonceBase64) {
+    public static String base64EncodeNonce(String nonceBase64) {
         return base64Decode(nonceBase64);
     }
 
     public static HttpDigest ofDigestResponse(HttpRequest request) {
         HttpDigest digestResponse = new HttpDigest();
-        digestResponse.setNonce(base64DecodeNonce());
+        digestResponse.setNonce(base64EncodeNonce());
         digestResponse.setQop("auth");
         digestResponse.setAlgorithm("MD5");
         digestResponse.setRealm(Config.REALM);
